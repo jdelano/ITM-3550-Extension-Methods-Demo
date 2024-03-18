@@ -22,7 +22,7 @@ class Program
             .Where(x => x % 2 == 0)
             .Reverse();
 
-        range.ToList().ForEach(item => Console.Write(item));
+        range.ToList().ForEach(item => Console.WriteLine($"{item}"));
 
         var range2 = range.Select(s => new { Original = s, Squared = s.Square() });
         range2.ToList().ForEach(item => Console.WriteLine($"Original: {item.Original}; Squared: {item.Squared}"));
